@@ -1,0 +1,27 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+group = 'redis.utils'
+archiveBaseName = 'gsoulmate'
+version = '0.0.1'
+
+repositories {
+   mavenCentral()
+}
+
+dependencies {
+    groovy 'org.codehaus.groovy:groovy-all:1.8.4'
+    groovy fileTree(dir: 'lib', include: '*.jar')
+    testCompile 'junit:junit:4.8.1'
+}
+
+/*
+TODO: Customize for deployment
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: "file://localhost/repo/") {
+            authentication(userName: "user", password: "pass")
+        }
+    }
+}
+*/

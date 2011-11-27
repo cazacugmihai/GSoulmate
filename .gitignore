@@ -1,0 +1,7 @@
+.idea
+.project
+.gradle
+bin/
+build
+out
+gsoulmate.iml
